@@ -27,6 +27,7 @@ import 'vuetify/dist/vuetify.min.css';
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('keyword-select', require('./components/keywordSelect.vue').default);
 Vue.component('add-panel', require('./components/addPanel.vue').default);
+Vue.component('image-upload', require('./components/imageUpload.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

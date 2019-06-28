@@ -1,10 +1,10 @@
 <template>
-    <v-app>
+        <div>
         <div class="text-lg-right">
             <a v-bind:href="url" class="btn"><v-btn color="info">+ add new {{name}}</v-btn></a>
         </div>
         <hr>
-    </v-app>
+        </div>
 </template>
 
 <script>

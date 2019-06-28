@@ -34,7 +34,7 @@ Route::group([
     Route::get('{username}/info', 'ProfileController@info');
     Route::post('{username}/edit', 'ProfileController@update');
     
-    Route::resource('{username}/posts', 'PostsController');
+    Route::resource('{username}/posts', 'PostController');
     Route::resource('{username}/categories', 'CategoryController')->middleware('admin');
 
 });

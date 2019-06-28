@@ -13,10 +13,10 @@ class KeywordsPosts extends Migration
      */
     public function up()
     {
-        Schema::create('keywords_posts', function (Blueprint $table) {
+        Schema::create('keyword_post', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('keywords_id')->unsigned();
-            $table->integer('posts_id')->unsigned();
+            $table->integer('keyword_id')->unsigned();
+            $table->integer('post_id')->unsigned();
         });
     }
 

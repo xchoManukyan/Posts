@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Profile;
 
-class ProfilesTableSeeder extends Seeder
+class ProfileTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -16,7 +16,7 @@ class ProfilesTableSeeder extends Seeder
         $profile->first_name = 'fname';
         $profile->last_name = 'lname';
         $profile->gender = 'male';
-        $profile->icon = 'storage/profiles/9UsZz5m6EIrauK94ClhwicY0IFWrNSyz2v3Lqmbz.jpeg';
+        $profile->icon = 'storage/profiles/3x0NxTb1m4Nfn1HuZgqcR5Vs40p4RiSLd94clvHt.png';
         $profile->birth_date = '1990';
         $profile->phone = '+789 445 114 14';
         $profile->adress = 'City road 34';
@@ -28,7 +28,7 @@ class ProfilesTableSeeder extends Seeder
         $profile->first_name = 'fname';
         $profile->last_name = 'lname';
         $profile->gender = 'male';
-        $profile->icon = 'storage/profiles/9UsZz5m6EIrauK94ClhwicY0IFWrNSyz2v3Lqmbz.jpeg';
+        $profile->icon = 'storage/profiles/wS3y54s3XFkqccKpJrCAzzeyDgAv4HJWRxWKIheo.jpeg';
         $profile->birth_date = '1990';
         $profile->phone = '+789 445 114 14';
         $profile->adress = 'City road 34';

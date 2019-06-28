@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Posts extends Model
+class Post extends Model
 {   
 
     protected $fillable = [
@@ -18,6 +18,6 @@ class Posts extends Model
 
     public function keywords()
     {
-        return $this->belongsToMany(Keywords::class);
+        return $this->belongsToMany(Keyword::class);
     }
 }

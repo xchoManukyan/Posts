@@ -1,9 +1,9 @@
 <?php
 
-use App\Posts;
+use App\Post;
 use Illuminate\Database\Seeder;
 
-class PostsTableSeeder extends Seeder
+class PostTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        $post = new Posts();
+        $post = new Post();
         $post->title = 'Some awesome heading';
         $post->description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo.';
         $post->content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo. Nunc sit amet justo venenatis, pellentesque dui vitae, elementum neque. Aliquam erat volutpat. Vivamus egestas, diam vitae semper ultrices, tortor massa venenatis nibh, in aliquam mi est fermentum lorem. Integer luctus nulla enim, nec feugiat mi interdum vel. Nulla sollicitudin, leo id venenatis tincidunt, tortor lacus consectetur mauris, a pellentesque odio lorem a augue.
@@ -30,7 +30,7 @@ class PostsTableSeeder extends Seeder
         $post->user_id = 1;
         $post->save();
 
-        $post = new Posts();
+        $post = new Post();
         $post->title = 'Some awesome heading';
         $post->description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo.';
         $post->content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo. Nunc sit amet justo venenatis, pellentesque dui vitae, elementum neque. Aliquam erat volutpat. Vivamus egestas, diam vitae semper ultrices, tortor massa venenatis nibh, in aliquam mi est fermentum lorem. Integer luctus nulla enim, nec feugiat mi interdum vel. Nulla sollicitudin, leo id venenatis tincidunt, tortor lacus consectetur mauris, a pellentesque odio lorem a augue.
@@ -48,7 +48,7 @@ class PostsTableSeeder extends Seeder
         $post->user_id = 2;
         $post->save();
 
-        $post = new Posts();
+        $post = new Post();
         $post->title = 'Some awesome heading';
         $post->description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo.';
         $post->content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo. Nunc sit amet justo venenatis, pellentesque dui vitae, elementum neque. Aliquam erat volutpat. Vivamus egestas, diam vitae semper ultrices, tortor massa venenatis nibh, in aliquam mi est fermentum lorem. Integer luctus nulla enim, nec feugiat mi interdum vel. Nulla sollicitudin, leo id venenatis tincidunt, tortor lacus consectetur mauris, a pellentesque odio lorem a augue.
@@ -66,7 +66,7 @@ class PostsTableSeeder extends Seeder
         $post->user_id = 3;
         $post->save();
 
-        $post = new Posts();
+        $post = new Post();
         $post->title = 'Some awesome heading';
         $post->description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo.';
         $post->content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo. Nunc sit amet justo venenatis, pellentesque dui vitae, elementum neque. Aliquam erat volutpat. Vivamus egestas, diam vitae semper ultrices, tortor massa venenatis nibh, in aliquam mi est fermentum lorem. Integer luctus nulla enim, nec feugiat mi interdum vel. Nulla sollicitudin, leo id venenatis tincidunt, tortor lacus consectetur mauris, a pellentesque odio lorem a augue.
@@ -84,7 +84,7 @@ class PostsTableSeeder extends Seeder
         $post->user_id = 4;
         $post->save();
 
-        $post = new Posts();
+        $post = new Post();
         $post->title = 'Some awesome heading';
         $post->description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo.';
         $post->content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo. Nunc sit amet justo venenatis, pellentesque dui vitae, elementum neque. Aliquam erat volutpat. Vivamus egestas, diam vitae semper ultrices, tortor massa venenatis nibh, in aliquam mi est fermentum lorem. Integer luctus nulla enim, nec feugiat mi interdum vel. Nulla sollicitudin, leo id venenatis tincidunt, tortor lacus consectetur mauris, a pellentesque odio lorem a augue.
@@ -102,7 +102,7 @@ class PostsTableSeeder extends Seeder
         $post->user_id = 5;
         $post->save();
 
-        $post = new Posts();
+        $post = new Post();
         $post->title = 'Some awesome heading';
         $post->description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo.';
         $post->content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo. Nunc sit amet justo venenatis, pellentesque dui vitae, elementum neque. Aliquam erat volutpat. Vivamus egestas, diam vitae semper ultrices, tortor massa venenatis nibh, in aliquam mi est fermentum lorem. Integer luctus nulla enim, nec feugiat mi interdum vel. Nulla sollicitudin, leo id venenatis tincidunt, tortor lacus consectetur mauris, a pellentesque odio lorem a augue.
@@ -120,7 +120,7 @@ class PostsTableSeeder extends Seeder
         $post->user_id = 6;
         $post->save();
 
-        $post = new Posts();
+        $post = new Post();
         $post->title = 'Some awesome heading';
         $post->description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo.';
         $post->content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo. Nunc sit amet justo venenatis, pellentesque dui vitae, elementum neque. Aliquam erat volutpat. Vivamus egestas, diam vitae semper ultrices, tortor massa venenatis nibh, in aliquam mi est fermentum lorem. Integer luctus nulla enim, nec feugiat mi interdum vel. Nulla sollicitudin, leo id venenatis tincidunt, tortor lacus consectetur mauris, a pellentesque odio lorem a augue.
@@ -138,7 +138,7 @@ class PostsTableSeeder extends Seeder
         $post->user_id = 3;
         $post->save();
 
-        $post = new Posts();
+        $post = new Post();
         $post->title = 'Some awesome heading';
         $post->description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo.';
         $post->content = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec nisi venenatis, ultricies ex nec, elementum eros. Nunc a ligula nibh. Sed suscipit quis purus ut commodo. Nunc sit amet justo venenatis, pellentesque dui vitae, elementum neque. Aliquam erat volutpat. Vivamus egestas, diam vitae semper ultrices, tortor massa venenatis nibh, in aliquam mi est fermentum lorem. Integer luctus nulla enim, nec feugiat mi interdum vel. Nulla sollicitudin, leo id venenatis tincidunt, tortor lacus consectetur mauris, a pellentesque odio lorem a augue.

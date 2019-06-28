@@ -2,28 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Posts;
+use App\Post;
 use App\User;
-use App\Keywords;
+use App\Keyword;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Support\Facades\Gate;
 
-class PostsController extends Controller
+class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
 
     protected function slug($value)
     {
         $slg = str_slug($value);
-        $isset = Posts::where('slug', $slg)->first();
+        $isset = Post::where('slug', $slg)->first();
 
         if($isset){
 
@@ -56,7 +50,7 @@ class PostsController extends Controller
         
             for ($i=0; $i < count($keywords); $i++) {
                 $text = ltrim($keywords[$i]);
-                $keyword = Keywords::firstOrNew(['text'=>$text]);
+                $keyword = Keyword::firstOrNew(['text'=>$text]);
                 $keyword->save();
                 $keywords_ids[] = $keyword->id;
             }
@@ -70,11 +64,7 @@ class PostsController extends Controller
         return view('profile/posts', ['user' => $user, 'profile' => $user->profile, 'posts' => $user->posts]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create($username)
     {   
         $user = User::where('name', $username)->with('profile')->firstOrFail();
@@ -87,12 +77,6 @@ class PostsController extends Controller
         return view('profile/postCreate', ['user' => $user, 'profile' => $user->profile]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request, $username)
     {     
         $user = User::where('name', $username)->with('profile')->firstOrFail();
@@ -113,32 +97,22 @@ class PostsController extends Controller
         $data['slug'] = $this->slug($data['title']);
         $data['user_id'] = auth()->id();
 
-        $post = Posts::create($data);
+        $post = Post::create($data);
         $post->keywords()->sync($this->saveKeywords($request->keywords));
         return redirect('profile/'.$user->name.'/posts')->with('success', 'Post created!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Posts  $posts
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show($username, $slug)
     {   
-        //
+        abort(404);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Posts  $posts
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($username, $slug)
     {   
         
-        $post = Posts::where('slug', $slug)->with('user', 'keywords')->firstOrFail();
+        $post = Post::where('slug', $slug)->with('user', 'keywords')->firstOrFail();
         
         if(!Gate::allows('checkOwner', $post->user) || $post->user->name != $username){
             abort(403, 'not Authorized');
@@ -147,16 +121,10 @@ class PostsController extends Controller
         return view('profile/postEdit', ['user' => $post->user, 'profile' => $post->user->profile, 'post' => $post]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Posts  $posts
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, $username, $slug)
     {
-        $post = Posts::where('slug', $slug)->with('user')->firstOrFail();
+        $post = Post::where('slug', $slug)->with('user')->firstOrFail();
        
         if(!Gate::allows('checkOwner', $post->user) || $post->user->name != $username){
             abort(403, 'not Authorized');
@@ -181,15 +149,9 @@ class PostsController extends Controller
         return redirect('posts/'.$post->slug)->with('success', 'Post updated!');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Posts  $posts
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($username, $slug)
     {
-        $post = Posts::where('slug', $slug)->with('user')->firstOrFail();
+        $post = Post::where('slug', $slug)->with('user')->firstOrFail();
        
         if(!Gate::allows('checkOwner', $post->user) || $post->user->name != $username){
             abort(403, 'not Authorized');
